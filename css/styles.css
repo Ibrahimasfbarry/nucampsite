@@ -40,9 +40,6 @@ footer {
 .btn-top{
     margin-top: 1px;
 }
-
-.tab-content {
-    border: 1px solid #DDD;
-    border-top: none;
-    padding: 10px;
-}
+.accordion-button {
+    background-color: #d3d3d3;
+  }
