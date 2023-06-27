@@ -25,12 +25,16 @@
                     <img src="img/logo.png" class="img-fluid" />
                 </div>
                 <div class="col">
-                    <div>
                         <h1>Nucamp</h1>
                         <h2>a better way to camp</h2>
-                        <a href="#reserveForm">Jump to section 2</a><br />
-                            <button class="btn btn-info pull-right" type="submit">Reserve Campsite</button>
-                    </div>
+                </div>
+                <div>               
+                    <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-bs-toggle="tooltip"
+                    data-bs-placement="bottom" data-bs-html="true" title="Or call us at <br />
+                    <strong>1-206-555-1234</strong>">
+                    Reserve Campsite
+                    </a>
+                <!--- <button class="btn btn-info pull-right" type="submit">Reserve Campsite</button> --->
                 </div>
             </div>
         </div>
@@ -159,6 +163,11 @@
     </footer>
     <!-- Bootstrap JavaScript plugins.-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))    
+     </script>
 
 </body>
 </html>
