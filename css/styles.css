@@ -37,3 +37,12 @@ footer {
 .navbar {
     background-color: #901CAD;
 }
+.btn-top{
+    margin-top: 1px;
+}
+
+.tab-content {
+    border: 1px solid #DDD;
+    border-top: none;
+    padding: 10px;
+}
