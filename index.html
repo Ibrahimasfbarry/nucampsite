@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <!-- Additional CSS must be placed after Bootstrap CSS-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster| Open+Sans" />
-    <link rel="stylesheet" href="css/styles.css" />
+   <link rel="stylesheet" href="css/styles.css" />
+    <!-- <link rel="stylesheet" href="css/styles.scss" /> -->
      <!-- Additional CSS must be placed after Bootstrap CSS -->
      <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
 
@@ -27,14 +28,13 @@
                 <div class="col">
                         <h1>Nucamp</h1>
                         <h2>a better way to camp</h2>
+                        <button class="btn btn-info pull-right" type="submit">Reserve Campsite</button>
                 </div>
                 <div>               
                     <a id="#reserveModal" role="button" class="btn btn-lg btn-info" data-bs-toggle="modal-next"
                     data-bs-placement="bottom" data-bs-html="true" title="Or call us at <br />
                     <strong>1-206-555-1234</strong>">
-                    Reserve Campsite
                     </a>
-                <!--- <button class="btn btn-info pull-right" type="submit">Reserve Campsite</button> --->
                 </div>
             </div>
         </div>
@@ -45,15 +45,15 @@
             <div class="modal-content">
                 <div class="modal-header bg-info text-white">
                     <h3 class="modal-title">Reserve a Campsite</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Reserve a Campsite</button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
                         <form>
                             <div class="row">
-                                <div class="mb-3 col-12">
+                                <div class="mb-3 col-12 text-primary">
                                     <label class="sr-only" for="loginEmail">Email address</label>
-                                    <input type="email" class="form-control form-control-sm" id="loginEmail"
+                                    <input type="email" class="form-control form-control-sm text-primary" id="loginEmail"
                                         placeholder="Enter email">
                                 </div>
                                 <div class="mb-3 col-12">
@@ -150,11 +150,11 @@
         <div class="row row-content">
             <div class="col-md-8 max-auto">
                 <div class="homeCarousel" class="carousel slide" data-bs-ride="carousel">
-                   <!--- <ol class="carousel-indicators">
-                        <li data-target="#homeCarousel" data-slide-to="0" class="active">0</li>
-                        <li data-target="#homeCarousel" data-slide-to="1">1</li>
-                        <li data-target="#homeCarousel" data-slide-to="2">2</li>
-                    </ol> -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#homeCarousel" data-slide-to="1"></li>
+                        <li data-target="#homeCarousel" data-slide-to="2"></li>
+                    </ol>
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
                         <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
@@ -195,7 +195,6 @@
             </div>
 
         </div>
-
         <div class="row row-content align-items-center" >
                 <div class="col-sm-4 order-sm-last col-md-3">
                     <h2 class="text-sm-right">Discover & Review</h2>
@@ -238,12 +237,12 @@
                 <div class="row row-content">
                     <div class="col-sm-9 col-lg-5 max-auto text-center">
                         <div class="card">
-                            <h3 class="card-header btn-info">Reserve a Campsite</h3>
+                            <h3 class="card-header">Reserve a Campsite</h3>
                             <div class="card-body">
                                 <form id="reserveForm" action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <label >Number of Campers</label>
+                                            <label class="numofcamper">Number of Campers</label>
                                             <select name="numCampers" id="numCampers">
                                                 <option value="1">1️</option>
                                                 <option value="2">2</option>
@@ -262,8 +261,7 @@
                                     </div>
                                     <div class="row margin-bottom:3">
                                         <label class="col-sm-6 col-form-label">Campsite Type</label>
-                                        <div class="col-2" class="btn-group">
-
+                                        <div class="col-2 btn-group" role="group">
                                             <input type="radio" class="btn-check" name="siteType" id="siteTent" autocomplete="off" checked>
                                             <label class="btn btn-outline-primary" for="siteTent">Tent</label>
                                             <input type="radio" class="btn-check" name="siteType" id="siteRv" autocomplete="off" checked>
