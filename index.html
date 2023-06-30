@@ -28,12 +28,11 @@
                 <div class="col">
                         <h1>Nucamp</h1>
                         <h2>a better way to camp</h2>
-                        <button class="btn btn-info pull-right" type="submit">Reserve Campsite</button>
                 </div>
-                <div>               
-                    <a id="#reserveModal" role="button" class="btn btn-lg btn-info" data-bs-toggle="modal-next"
+                <div class="col-md-4 col-xl-2 mt-4">               
+                    <a  role="button" class="btn btn-lg btn-info" data-bs-toggle="modal-next"
                     data-bs-placement="bottom" data-bs-html="true" title="Or call us at <br />
-                    <strong>1-206-555-1234</strong>">
+                    <strong>1-206-555-1234</strong>"> Reserve campsite
                     </a>
                 </div>
             </div>
@@ -43,9 +42,9 @@
     <div class="modal fade" id="reserveModal">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header bg-info text-white">
+                <div class="modal-header">
                     <h3 class="modal-title">Reserve a Campsite</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Reserve a Campsite</button>
+                    <button type="button"  class="btn-close pull-right" data-bs-dismiss="modal" aria-label="Close">Reserve a Campsite</button>
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
@@ -227,10 +226,25 @@
                 </div>
                 <div class="col">
                     <div class="d-flex">
-                        <img class="me-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="bootstrap Outfitters" />
-                        <div class="align-self-center">
+                        <img class="ms-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="bootstrap Outfitters" />
+                        <div class="row  align-self-center">
                             <h3>Bootstrap Outfitters</h3>
                             <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-content align-items-start review-section mb-3">
+                    <div class="col-sm-4 col-md-3 order-sm-first">
+                        <h2 text-sm-end>What Are Happy Campers Saying?</h2>
+                        <div class="col ms-lg-5">
+                            <img src="img/happy-campers.png"  class="img-thumbnail img-fluid"/>
+                        </div>
+                        <div class="col">
+                            <h3>So Worth it!</h3>
+                            <p>You may makee up your own Review</p>
+                        </div>
+                        <div class="d-flex justify-content-center mt-5">
+                            <button class="campsite-btn" data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve Campsite</button>
                         </div>
                     </div>
                 </div>
@@ -263,9 +277,9 @@
                                         <label class="col-sm-6 col-form-label">Campsite Type</label>
                                         <div class="col-2 btn-group" role="group">
                                             <input type="radio" class="btn-check" name="siteType" id="siteTent" autocomplete="off" checked>
-                                            <label class="btn btn-outline-primary" for="siteTent">Tent</label>
-                                            <input type="radio" class="btn-check" name="siteType" id="siteRv" autocomplete="off" checked>
-                                            <label class="btn btn-outline-primary" for="siteRv">Rv</label>
+                                            <label class="btn btn-primary" for="siteTent">Tent</label>
+                                            <input type="radio" class="btn btn-check" name="siteType" id="siteRv" autocomplete="off" checked>
+                                            <label class="btn btn-primary" for="siteRv">Rv</label>
                                         </div>
                                     </div>
                                     <div class="row">
